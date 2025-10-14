@@ -1,6 +1,6 @@
 import React from 'react';
 // 1. Importa la imagen desde su nueva ubicación
-import logoSrc from '../../assets/logo.png'; 
+import logoSrc from '../assets/logo.png'; 
 
 const Logo: React.FC<{ className?: string }> = ({ className = 'h-24' }) => {
   return (
