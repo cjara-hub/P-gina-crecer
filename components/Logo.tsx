@@ -1,16 +1,16 @@
 import React from 'react';
-// 1. Importa la imagen desde su nueva ubicación
-import logoSrc from '../assets/logo.png'; 
+import logoSrc from '../assets/logo.png'; // Asegúrate que la ruta sea la correcta
 
-const Logo: React.FC<{ className?: string }> = ({ className = 'h-24' }) => {
+const Logo: React.FC = () => { // No necesitas la prop 'className' por ahora
   return (
-    <div className={`flex items-center ${className}`}>
+    // Contenedor principal
+    <div className="flex items-center justify-start"> {/* justify-start alinea a la izquierda */}
       <a href="#inicio" aria-label="Volver al inicio">
+        {/* Cambia las clases aquí para controlar el tamaño */}
         <img 
-          // 2. Usa la variable importada en el 'src'
           src={logoSrc} 
           alt="Logo de Fundación Crecer Consultora Educacional"
-          className="h-full w-auto"
+          className="h-12 w-auto" // Reducimos la altura a 'h-12' (48px), puedes ajustarlo
         />
       </a>
     </div>
